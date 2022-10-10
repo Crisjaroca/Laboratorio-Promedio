@@ -14,6 +14,7 @@ public class InformeActivity extends AppCompatActivity {
     private TextView nombreInfo;
     private TextView codigoInfo;
     private TextView materiaInfo;
+    private TextView numNotasInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,13 +24,17 @@ public class InformeActivity extends AppCompatActivity {
         nombreInfo = findViewById(R.id.nombreInfo);
         codigoInfo = findViewById(R.id.codigoInfo);
         materiaInfo = findViewById(R.id.materiaInfo);
+        numNotasInfo = findViewById(R.id.numNotasInfo);
 
         String nombre = getIntent().getStringExtra("NOMBRE_KEY");
         String codigo = getIntent().getStringExtra("CODIGO_KEY");
         String materia = getIntent().getStringExtra("MATERIA_KEY");
+        String numero = getIntent().getStringExtra("NUMERO_KEY");
+
         nombreInfo.setText(nombre);
         codigoInfo.setText(codigo);
         materiaInfo.setText(materia);
+        numNotasInfo.setText(numero);
 
         this.volverBtnInfo = findViewById(R.id.volverBtn);
         this.volverBtnInfo.setOnClickListener(view -> {

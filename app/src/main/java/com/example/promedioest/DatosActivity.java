@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class DatosActivity extends AppCompatActivity {
 
@@ -16,6 +19,8 @@ public class DatosActivity extends AppCompatActivity {
 
     private int notas = 0;
     private int sumatoria = 0;
+
+    private ArrayList notasRecibidas = new ArrayList();
 
     private TextView nombreInfo;
     private TextView codigoInfo;
@@ -42,15 +47,6 @@ public class DatosActivity extends AppCompatActivity {
         codigoInfo.setText(codigo);
         materiaInfo.setText(materia);
 
-        this.guardarBtn = findViewById(R.id.guardarBtn);
-        this.guardarBtn.setOnClickListener(view -> {
-
-            notaInfo.setText(Integer.toString(sumatoria+=2));
-            notaInfo.setHint("Digite una nota");
-            notas++;
-            numeroNotas.setText(Integer.toString(notas));
-        });
-
         this.volverBtn = findViewById(R.id.volverBtn);
         this.volverBtn.setOnClickListener(view -> {
             finish();
@@ -62,7 +58,22 @@ public class DatosActivity extends AppCompatActivity {
             intent.putExtra("NOMBRE_KEY", nombre);
             intent.putExtra("CODIGO_KEY", codigo);
             intent.putExtra("MATERIA_KEY", materia);
+            intent.putExtra("NUMERO_KEY" , numeroNotas.getText().toString());
+            intent.putExtra("SUMATORIA_KEY", sumatoria);
+            intent.putExtra("TODAS_NOTAS", notasRecibidas);
             startActivity(intent);
         });
+    }
+
+    public void guardarDatos(View view){
+        String notaStr = notaInfo.getText().toString();
+        int notaVal = Integer.parseInt(notaStr);
+
+        notasRecibidas.add(notaVal);
+
+        notaInfo.setText(Integer.toString(sumatoria += Integer.parseInt(notasRecibidas.get(notas).toString())));
+        notaInfo.setHint("Digite una nota");
+        notas++;
+        numeroNotas.setText(Integer.toString(notas));
     }
 }

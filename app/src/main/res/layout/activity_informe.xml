@@ -73,6 +73,13 @@
             android:text="Aquíva"
             android:textAlignment="center" />
 
+        <TextView
+            android:id="@+id/numNotasInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aquí va"
+            android:textAlignment="center" />
+
     </LinearLayout>
 
     <View
