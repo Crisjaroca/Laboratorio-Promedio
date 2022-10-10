@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">PromedioEst</string>
+    <string-array name="materias">
+        <item>Electiva de Profundización I</item>
+        <item>Ingeniería del Software III</item>
+        <item>Optimización de Modelos</item>
+        <item>Problemas de Contexto</item>
+        <item>Sistemas Distribuidos</item>
+        <item>Taller de Aplicaciones Móviles</item>
+    </string-array>
 </resources>
