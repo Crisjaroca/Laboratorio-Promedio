@@ -68,7 +68,7 @@ public class DatosActivity extends AppCompatActivity {
                 intent.putExtra("CODIGO_KEY", codigo);
                 intent.putExtra("MATERIA_KEY", materia);
                 intent.putExtra("NUMERO_KEY" , numeroNotas.getText().toString());
-                intent.putExtra("SUMATORIA_KEY", sumatoria);
+                intent.putExtra("SUMATORIA_KEY", notaSuma.getText().toString());
                 intent.putExtra("TODAS_NOTAS", notasRecibidas);
                 intent.putExtras(enviaDatos);
                 startActivity(intent);

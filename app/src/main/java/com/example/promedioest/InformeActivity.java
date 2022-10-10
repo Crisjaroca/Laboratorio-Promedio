@@ -16,6 +16,7 @@ public class InformeActivity extends AppCompatActivity {
     private TextView materiaInfo;
     private TextView numNotasInfo;
     private TextView todasNotasInfo;
+    private TextView notaSumaInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,16 +28,20 @@ public class InformeActivity extends AppCompatActivity {
         materiaInfo = findViewById(R.id.materiaInfo);
         numNotasInfo = findViewById(R.id.numNotasInfo);
         todasNotasInfo = findViewById(R.id.todasNotasInfo);
+        notaSumaInfo = findViewById(R.id.notaSumaInfo);
 
         String nombre = getIntent().getStringExtra("NOMBRE_KEY");
         String codigo = getIntent().getStringExtra("CODIGO_KEY");
         String materia = getIntent().getStringExtra("MATERIA_KEY");
         String numero = getIntent().getStringExtra("NUMERO_KEY");
+        String suma = getIntent().getStringExtra("SUMATORIA_KEY");
 
         nombreInfo.setText(nombre);
         codigoInfo.setText(codigo);
         materiaInfo.setText(materia);
         numNotasInfo.setText(numero);
+        notaSumaInfo.setText(suma);
+
         Bundle recibeDatos = getIntent().getExtras();
         String nota = recibeDatos.getString("NOTAS");
 
