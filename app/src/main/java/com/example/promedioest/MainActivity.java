@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
         codigoEst = findViewById(R.id.codigoEst);
         materiasEst = findViewById(R.id.materiasEst);
 
-        this.continuarBtn = findViewById(R.id.continuarBtn);
+        this.continuarBtn = findViewById(R.id.volverBtn);
         this.continuarBtn.setOnClickListener(view -> {
-            Intent intent = new Intent(this, InformeActivity.class);
+            Intent intent = new Intent(this, DatosActivity.class);
             intent.putExtra("NOMBRE_KEY", nombreEst.getText().toString());
             intent.putExtra("CODIGO_KEY", codigoEst.getText().toString());
             intent.putExtra("MATERIA_KEY", materiasEst.getSelectedItem().toString());

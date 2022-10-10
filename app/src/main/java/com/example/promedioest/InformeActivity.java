@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 public class InformeActivity extends AppCompatActivity {
@@ -32,9 +31,12 @@ public class InformeActivity extends AppCompatActivity {
         codigoInfo.setText(codigo);
         materiaInfo.setText(materia);
 
-        this.volverBtnInfo = findViewById(R.id.continuarBtn);
+        this.volverBtnInfo = findViewById(R.id.volverBtn);
         this.volverBtnInfo.setOnClickListener(view -> {
             Intent intent = new Intent(this, MainActivity.class);
+            intent.putExtra("NOMBRE_KEY", nombre);
+            intent.putExtra("CODIGO_KEY", codigo);
+            intent.putExtra("MATERIA_KEY", materia);
             finish();
         });
     }

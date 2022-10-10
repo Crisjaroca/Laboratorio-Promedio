@@ -92,7 +92,7 @@
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
     <Button
-        android:id="@+id/continuarBtn"
+        android:id="@+id/volverBtn"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
         android:layout_marginTop="25dp"
