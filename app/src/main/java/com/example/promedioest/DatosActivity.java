@@ -26,6 +26,7 @@ public class DatosActivity extends AppCompatActivity {
     private TextView codigoInfo;
     private TextView materiaInfo;
     private TextView numeroNotas;
+    private TextView notaSuma;
     private EditText notaInfo;
 
     @Override
@@ -37,6 +38,7 @@ public class DatosActivity extends AppCompatActivity {
         codigoInfo = findViewById(R.id.codigoInfo);
         materiaInfo = findViewById(R.id.materiaInfo);
         numeroNotas = findViewById(R.id.numeroNotas);
+        notaSuma = findViewById(R.id.notaSumaDatos);
         notaInfo = findViewById(R.id.notaInfo);
 
         String nombre = getIntent().getStringExtra("NOMBRE_KEY");
@@ -72,6 +74,7 @@ public class DatosActivity extends AppCompatActivity {
         notasRecibidas.add(notaVal);
 
         notaInfo.setText(Integer.toString(sumatoria += Integer.parseInt(notasRecibidas.get(notas).toString())));
+        notaSuma.setText(notaInfo.getText());
         notaInfo.setHint("Digite una nota");
         notas++;
         numeroNotas.setText(Integer.toString(notas));
