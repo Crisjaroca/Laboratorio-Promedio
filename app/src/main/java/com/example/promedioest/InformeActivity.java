@@ -43,9 +43,9 @@ public class InformeActivity extends AppCompatActivity {
         notaSumaInfo.setText(suma);
 
         Bundle recibeDatos = getIntent().getExtras();
-        String nota = recibeDatos.getString("NOTAS");
+        String[] nota = recibeDatos.getStringArray("NOTAS");
 
-        todasNotasInfo.setText(nota);
+        todasNotasInfo.setText(nota[0] + "" + nota[1] + "" + nota[2]);
 
 
         this.volverBtnInfo = findViewById(R.id.volverBtn);

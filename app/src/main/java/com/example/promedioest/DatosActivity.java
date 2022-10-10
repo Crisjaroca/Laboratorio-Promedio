@@ -20,7 +20,7 @@ public class DatosActivity extends AppCompatActivity {
     private int notas = 0;
     private int sumatoria = 0;
 
-    private ArrayList notasRecibidas = new ArrayList();
+    private String[] notasRecibidas = new String[50];
 
     private TextView nombreInfo;
     private TextView codigoInfo;
@@ -61,7 +61,7 @@ public class DatosActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Bundle enviaDatos = new Bundle();
-                enviaDatos.putString("NOTAS",todasNotasDatos.getText().toString());
+                enviaDatos.putStringArray("NOTAS",notasRecibidas);
 
                 Intent intent = new Intent(DatosActivity.this, InformeActivity.class);
                 intent.putExtra("NOMBRE_KEY", nombre);
@@ -81,9 +81,9 @@ public class DatosActivity extends AppCompatActivity {
         int notaVal = Integer.parseInt(notaStr);
         todasNotasDatos.setText(notaInfo.getText());
 
-        notasRecibidas.add(notaVal);
+        notasRecibidas[notas] = notaStr;
 
-        notaInfo.setText(Integer.toString(sumatoria += Integer.parseInt(notasRecibidas.get(notas).toString())));
+        notaInfo.setText(Integer.toString(sumatoria += notaVal));
         notaSuma.setText(notaInfo.getText());
         notaInfo.setHint("Digite una nota");
         notas++;
