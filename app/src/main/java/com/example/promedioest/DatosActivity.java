@@ -18,9 +18,9 @@ public class DatosActivity extends AppCompatActivity {
 
         this.volverBtn = findViewById(R.id.volverBtn);
         this.volverBtn.setOnClickListener(view -> {
-            Intent intent = new Intent(this, MainActivity.class);
             finish();
         });
+
         this.calcularBtn = findViewById(R.id.calcularBtn);
         this.calcularBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, InformeActivity.class);

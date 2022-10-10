@@ -20,11 +20,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        nombreEst = findViewById(R.id.nombreEst);
+        nombreEst = findViewById(R.id.nombreEstu);
         codigoEst = findViewById(R.id.codigoEst);
         materiasEst = findViewById(R.id.materiasEst);
 
-        this.continuarBtn = findViewById(R.id.continuarBtn);
+        this.continuarBtn = findViewById(R.id.volverBtnInfo);
         this.continuarBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, DatosActivity.class);
             startActivity(intent);

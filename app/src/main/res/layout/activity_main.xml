@@ -69,7 +69,7 @@
             android:text="Nombre" />
 
         <EditText
-            android:id="@+id/nombreEst"
+            android:id="@+id/nombreEstu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints=""
@@ -161,7 +161,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
     <Button
-        android:id="@+id/continuarBtn"
+        android:id="@+id/volverBtnInfo"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
         android:layout_marginTop="25dp"
