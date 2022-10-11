@@ -2,13 +2,18 @@ package com.example.promedioest;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputFilter;
+import android.text.Spanned;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.text.DecimalFormatSymbols;
 import java.util.ArrayList;
 
 public class DatosActivity extends AppCompatActivity {
@@ -19,6 +24,7 @@ public class DatosActivity extends AppCompatActivity {
 
     private int notas = 0;
     private int sumatoria = 0;
+    private int duration = Toast.LENGTH_SHORT;
 
     private String[] notasRecibidas = new String[50];
 
@@ -56,32 +62,61 @@ public class DatosActivity extends AppCompatActivity {
         this.informeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Bundle enviaDatos = new Bundle();
-                enviaDatos.putStringArray("NOTAS",notasRecibidas);
-                enviaDatos.putInt("NUMERO_KEY", notas);
-                enviaDatos.putInt("SUMATORIA_KEY",sumatoria);
+                if (notas==0){
+                    avisoRegistrar();
+                } else {
+                    Bundle enviaDatos = new Bundle();
+                    enviaDatos.putStringArray("NOTAS",notasRecibidas);
+                    enviaDatos.putInt("NUMERO_KEY", notas);
+                    enviaDatos.putInt("SUMATORIA_KEY",sumatoria);
 
-                Intent intent = new Intent(DatosActivity.this, InformeActivity.class);
-                intent.putExtra("NOMBRE_KEY", nombre);
-                intent.putExtra("CODIGO_KEY", codigo);
-                intent.putExtra("MATERIA_KEY", materia);
-                intent.putExtras(enviaDatos);
-                startActivity(intent);
+                    Intent intent = new Intent(DatosActivity.this, InformeActivity.class);
+                    intent.putExtra("NOMBRE_KEY", nombre);
+                    intent.putExtra("CODIGO_KEY", codigo);
+                    intent.putExtra("MATERIA_KEY", materia);
+                    intent.putExtras(enviaDatos);
+                    startActivity(intent);
+                }
             }
         });
     }
 
     public void guardarDatos(View view){
-        String notaStr = notaInfo.getText().toString();
-        int notaVal = Integer.parseInt(notaStr);
+        if (notaInfo.getText().toString().isEmpty()){
+            avisoNota();
+        } else if (Integer.parseInt(notaInfo.getText().toString()) < 0 || Integer.parseInt(notaInfo.getText().toString()) > 50){
+            avisoLimite();
+        }
+        else {
+            String notaStr = notaInfo.getText().toString();
+            int notaVal = Integer.parseInt(notaStr);
+            notasRecibidas[notas] = notaStr;
+            sumatoria += notaVal;
+            notaInfo.setText("");
+            notaInfo.setHint("Digite una nota");
+            notas++;
+            numeroNotas.setText(Integer.toString(notas));
+        }
+    }
 
-        notasRecibidas[notas] = notaStr;
-        sumatoria += notaVal;
+    private void avisoLimite() {
+        Context context = getApplicationContext();
+        CharSequence text = "Nota Fuera de Rango";
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+    }
 
-        notaInfo.setText("");
-        notaInfo.setHint("Digite una nota");
-        notas++;
-        
-        numeroNotas.setText(Integer.toString(notas));
+    private void avisoNota() {
+        Context context = getApplicationContext();
+        CharSequence text = "No Hay Nota Para Guardar";
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+    }
+
+    private void avisoRegistrar() {
+        Context context = getApplicationContext();
+        CharSequence text = "No Hay Notas Registradas";
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
     }
 }
