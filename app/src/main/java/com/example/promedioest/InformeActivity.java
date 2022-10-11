@@ -35,29 +35,39 @@ public class InformeActivity extends AppCompatActivity {
         Bundle recibeDatos = getIntent().getExtras();
         String[] nota = recibeDatos.getStringArray("NOTAS");
         int numero = recibeDatos.getInt("NUMERO_KEY");
-        int suma = recibeDatos.getInt("SUMATORIA_KEY");
+        //double suma = recibeDatos.getInt("SUMATORIA_KEY");
 
         String nombre = getIntent().getStringExtra("NOMBRE_KEY");
         String codigo = getIntent().getStringExtra("CODIGO_KEY");
         String materia = getIntent().getStringExtra("MATERIA_KEY");
-        int prom = suma/numero;
+
         int contador=0;
-
-        nombreInfo.setText(nombre);
-        codigoInfo.setText(codigo);
-        materiaInfo.setText(materia);
-        promedio.setText(Integer.toString(prom));
-
-        if (prom<30){
-            mensajePromedio.setText("El estudiante NO Aprobó");
-        } else{
-            mensajePromedio.setText("El estudiante Aprobó");
-        }
+        double prom = 0;
+        double suma = 0;
 
         for (int i = 0; i<nota.length; i++){
             if (nota[i]!=null){
                 contador++;
             }
+        }
+
+        for (int i = 0; i<nota.length; i++){
+            if (nota[i]!=null){
+                suma += Double.valueOf(nota[i]);
+            }
+        }
+
+        prom = suma/contador;
+
+
+        nombreInfo.setText(nombre);
+        codigoInfo.setText(codigo);
+        materiaInfo.setText(materia);
+
+        if (prom<3){
+            mensajePromedio.setText("El estudiante NO Aprobó");
+        } else{
+            mensajePromedio.setText("El estudiante Aprobó");
         }
 
         String [] notaImp = new String[contador];
@@ -78,5 +88,6 @@ public class InformeActivity extends AppCompatActivity {
             intent.putExtra("MATERIA_KEY", materia);
             finish();
         });
+        promedio.setText(Double.toString(prom));
     }
 }

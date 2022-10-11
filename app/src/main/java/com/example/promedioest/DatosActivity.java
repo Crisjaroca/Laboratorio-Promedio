@@ -23,7 +23,7 @@ public class DatosActivity extends AppCompatActivity {
     private Button guardarBtn;
 
     private int notas = 0;
-    private int sumatoria = 0;
+    private double sumatoria = 0;
     private int duration = Toast.LENGTH_SHORT;
 
     private String[] notasRecibidas = new String[50];
@@ -68,7 +68,7 @@ public class DatosActivity extends AppCompatActivity {
                     Bundle enviaDatos = new Bundle();
                     enviaDatos.putStringArray("NOTAS",notasRecibidas);
                     enviaDatos.putInt("NUMERO_KEY", notas);
-                    enviaDatos.putInt("SUMATORIA_KEY",sumatoria);
+                    enviaDatos.putDouble("SUMATORIA_KEY",sumatoria);
 
                     Intent intent = new Intent(DatosActivity.this, InformeActivity.class);
                     intent.putExtra("NOMBRE_KEY", nombre);
@@ -84,12 +84,12 @@ public class DatosActivity extends AppCompatActivity {
     public void guardarDatos(View view){
         if (notaInfo.getText().toString().isEmpty()){
             avisoNota();
-        } else if (Integer.parseInt(notaInfo.getText().toString()) < 0 || Integer.parseInt(notaInfo.getText().toString()) > 50){
+        } else if (Integer.parseInt(notaInfo.getText().toString()) < 0 || Integer.parseInt(notaInfo.getText().toString()) > 5){
             avisoLimite();
         }
         else {
             String notaStr = notaInfo.getText().toString();
-            int notaVal = Integer.parseInt(notaStr);
+            double notaVal = Double.valueOf(notaStr);
             notasRecibidas[notas] = notaStr;
             sumatoria += notaVal;
             notaInfo.setText("");
@@ -101,7 +101,7 @@ public class DatosActivity extends AppCompatActivity {
 
     private void avisoLimite() {
         Context context = getApplicationContext();
-        CharSequence text = "Nota Fuera de Rango";
+        CharSequence text = "Nota Fuera de Rango (0-5)";
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
     }
