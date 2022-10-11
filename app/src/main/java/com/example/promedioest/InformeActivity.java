@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.Arrays;
+
 public class InformeActivity extends AppCompatActivity {
     private Button volverBtnInfo;
     private Button calcularBtn;
@@ -39,6 +41,7 @@ public class InformeActivity extends AppCompatActivity {
         String codigo = getIntent().getStringExtra("CODIGO_KEY");
         String materia = getIntent().getStringExtra("MATERIA_KEY");
         int prom = suma/numero;
+        int contador=0;
 
         nombreInfo.setText(nombre);
         codigoInfo.setText(codigo);
@@ -46,12 +49,26 @@ public class InformeActivity extends AppCompatActivity {
         promedio.setText(Integer.toString(prom));
 
         if (prom<30){
-            mensajePromedio.setText("Perdiste Pelao");
+            mensajePromedio.setText("El estudiante NO Aprobó");
         } else{
-            mensajePromedio.setText("Pasaste Pelao");
+            mensajePromedio.setText("El estudiante Aprobó");
         }
 
-        todasNotasInfo.setText(nota[0]);
+        for (int i = 0; i<nota.length; i++){
+            if (nota[i]!=null){
+                contador++;
+            }
+        }
+
+        String [] notaImp = new String[contador];
+
+        for (int i = 0; i<notaImp.length; i++){
+            if (nota[i]!=null){
+                notaImp[i] = nota[i];
+                todasNotasInfo.append(notaImp[i]);
+                todasNotasInfo.append("\n");
+            }
+        }
 
         this.volverBtnInfo = findViewById(R.id.volverBtn);
         this.volverBtnInfo.setOnClickListener(view -> {
