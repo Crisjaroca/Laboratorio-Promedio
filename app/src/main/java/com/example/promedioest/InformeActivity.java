@@ -17,6 +17,8 @@ public class InformeActivity extends AppCompatActivity {
     private TextView numNotasInfo;
     private TextView todasNotasInfo;
     private TextView notaSumaInfo;
+    private TextView promedio;
+    private TextView mensajePromedio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,19 +31,27 @@ public class InformeActivity extends AppCompatActivity {
         numNotasInfo = findViewById(R.id.numNotasInfo);
         todasNotasInfo = findViewById(R.id.todasNotasInfo);
         notaSumaInfo = findViewById(R.id.notaSumaInfo);
+        promedio = findViewById(R.id.promedio);
+        mensajePromedio = findViewById(R.id.mensajeProm);
 
         String nombre = getIntent().getStringExtra("NOMBRE_KEY");
         String codigo = getIntent().getStringExtra("CODIGO_KEY");
         String materia = getIntent().getStringExtra("MATERIA_KEY");
         String numero = getIntent().getStringExtra("NUMERO_KEY");
         String suma = getIntent().getStringExtra("SUMATORIA_KEY");
+        int prom = Integer.parseInt(suma)/Integer.parseInt(numero);
 
         nombreInfo.setText(nombre);
         codigoInfo.setText(codigo);
         materiaInfo.setText(materia);
         numNotasInfo.setText(numero);
         notaSumaInfo.setText(suma);
-
+        promedio.setText(Integer.toString(prom));
+        if (prom<30){
+            mensajePromedio.setText("Perdiste Pelao");
+        } else{
+            mensajePromedio.setText("Pasaste Pelao");
+        }
         Bundle recibeDatos = getIntent().getExtras();
         String[] nota = recibeDatos.getStringArray("NOTAS");
 
