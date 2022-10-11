@@ -50,7 +50,8 @@ public class InformeActivity extends AppCompatActivity {
         } else{
             mensajePromedio.setText("Pasaste Pelao");
         }
-        todasNotasInfo.setText(nota[0] + "\n" + nota[1] + "\n" + nota[2]);
+
+        todasNotasInfo.setText(nota[0]);
 
         this.volverBtnInfo = findViewById(R.id.volverBtn);
         this.volverBtnInfo.setOnClickListener(view -> {
