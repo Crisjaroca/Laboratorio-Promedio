@@ -84,10 +84,9 @@ public class DatosActivity extends AppCompatActivity {
     public void guardarDatos(View view){
         if (notaInfo.getText().toString().isEmpty()){
             avisoNota();
-        } else if (Integer.parseInt(notaInfo.getText().toString()) < 0 || Integer.parseInt(notaInfo.getText().toString()) > 5){
+        } else if (Double.valueOf(notaInfo.getText().toString()) < 0.0 || Double.valueOf(notaInfo.getText().toString()) > 5.0){
             avisoLimite();
-        }
-        else {
+        } else {
             String notaStr = notaInfo.getText().toString();
             double notaVal = Double.valueOf(notaStr);
             notasRecibidas[notas] = notaStr;

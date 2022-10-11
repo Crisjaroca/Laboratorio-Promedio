@@ -75,7 +75,7 @@ public class InformeActivity extends AppCompatActivity {
         for (int i = 0; i<notaImp.length; i++){
             if (nota[i]!=null){
                 notaImp[i] = nota[i];
-                todasNotasInfo.append(notaImp[i]);
+                todasNotasInfo.append(String.format("%.1f", Double.valueOf(notaImp[i])));
                 todasNotasInfo.append("\n");
             }
         }
@@ -88,6 +88,7 @@ public class InformeActivity extends AppCompatActivity {
             intent.putExtra("MATERIA_KEY", materia);
             finish();
         });
-        promedio.setText(Double.toString(prom));
+
+        promedio.setText(String.format("%.1f", prom));
     }
 }

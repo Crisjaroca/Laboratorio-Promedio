@@ -113,9 +113,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:maxLength="2"
+            android:maxLength="3"
             android:hint="Digite una nota"
-            android:inputType="number" />
+            android:inputType="numberDecimal" />
 
     </LinearLayout>
 
