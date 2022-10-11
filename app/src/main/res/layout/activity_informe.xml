@@ -73,13 +73,6 @@
             android:text="Aquíva"
             android:textAlignment="center" />
 
-        <TextView
-            android:id="@+id/numNotasInfo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Aquí va"
-            android:textAlignment="center" />
-
     </LinearLayout>
 
     <View
@@ -160,10 +153,4 @@
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent" />
 
-    <TextView
-        android:id="@+id/notaSumaInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

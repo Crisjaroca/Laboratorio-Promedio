@@ -26,8 +26,6 @@ public class DatosActivity extends AppCompatActivity {
     private TextView codigoInfo;
     private TextView materiaInfo;
     private TextView numeroNotas;
-    private TextView notaSuma;
-    private TextView todasNotasDatos;
     private EditText notaInfo;
 
     @Override
@@ -39,9 +37,7 @@ public class DatosActivity extends AppCompatActivity {
         codigoInfo = findViewById(R.id.codigoInfo);
         materiaInfo = findViewById(R.id.materiaInfo);
         numeroNotas = findViewById(R.id.numeroNotas);
-        notaSuma = findViewById(R.id.notaSumaDatos);
         notaInfo = findViewById(R.id.notaInfo);
-        todasNotasDatos = findViewById(R.id.todasNotasDatos);
 
         String nombre = getIntent().getStringExtra("NOMBRE_KEY");
         String codigo = getIntent().getStringExtra("CODIGO_KEY");
@@ -62,13 +58,13 @@ public class DatosActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Bundle enviaDatos = new Bundle();
                 enviaDatos.putStringArray("NOTAS",notasRecibidas);
+                enviaDatos.putInt("NUMERO_KEY", notas);
+                enviaDatos.putInt("SUMATORIA_KEY",sumatoria);
 
                 Intent intent = new Intent(DatosActivity.this, InformeActivity.class);
                 intent.putExtra("NOMBRE_KEY", nombre);
                 intent.putExtra("CODIGO_KEY", codigo);
                 intent.putExtra("MATERIA_KEY", materia);
-                intent.putExtra("NUMERO_KEY" , numeroNotas.getText().toString());
-                intent.putExtra("SUMATORIA_KEY", notaSuma.getText().toString());
                 intent.putExtra("TODAS_NOTAS", notasRecibidas);
                 intent.putExtras(enviaDatos);
                 startActivity(intent);
@@ -79,12 +75,11 @@ public class DatosActivity extends AppCompatActivity {
     public void guardarDatos(View view){
         String notaStr = notaInfo.getText().toString();
         int notaVal = Integer.parseInt(notaStr);
-        todasNotasDatos.setText(notaInfo.getText());
 
         notasRecibidas[notas] = notaStr;
+        sumatoria += notaVal;
 
-        notaInfo.setText(Integer.toString(sumatoria += notaVal));
-        notaSuma.setText(notaInfo.getText());
+        notaInfo.setText("");
         notaInfo.setHint("Digite una nota");
         notas++;
         numeroNotas.setText(Integer.toString(notas));
