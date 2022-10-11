@@ -100,7 +100,7 @@ public class DatosActivity extends AppCompatActivity {
 
     private void avisoLimite() {
         Context context = getApplicationContext();
-        CharSequence text = "Nota Fuera de Rango (0-5)";
+        CharSequence text = "Nota Fuera de Rango\n(0.0 - 5.0)";
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
     }
