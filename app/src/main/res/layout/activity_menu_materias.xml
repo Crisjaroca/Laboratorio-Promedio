@@ -4,18 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BFE4F4"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/textView2"
-        style="@style/tituloprincipalTxt"
-        android:layout_width="fill_parent"
-        android:layout_height="90dp"
-        android:background="#FF0000"
-        android:text="INICIO"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-1dp" />
+    tools:context=".MenuMateriasActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -28,22 +17,27 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/materiasBtn"
+            android:id="@+id/listarMateriasBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="MATERIAS" />
+            android:text="Listar" />
 
         <Button
-            android:id="@+id/estudiantesBtn"
+            android:id="@+id/agregarMateriasBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ESTUDIANTES" />
+            android:text="Agregar" />
 
         <Button
-            android:id="@+id/notasBtn"
+            android:id="@+id/modificarMateriasBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="NOTAS" />
+            android:text="Modificar" />
+
+        <Button
+            android:id="@+id/eliminarMateriasBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Eliminar" />
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
