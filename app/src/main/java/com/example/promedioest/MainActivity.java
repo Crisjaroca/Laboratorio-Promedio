@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ConexionSQLiteHelper conn = new ConexionSQLiteHelper(this,"bd_estudiantes", null,1);
+
         nombreEst = findViewById(R.id.nombreEstu);
         codigoEst = findViewById(R.id.codigoEst);
         materiasEst = findViewById(R.id.materiasEst);
