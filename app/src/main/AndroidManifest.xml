@@ -14,10 +14,10 @@
         android:theme="@style/Theme.PromedioEst"
         tools:targetApi="31">
         <activity
-            android:name=".AgregarMateriasActivity"
+            android:name=".Materia.AgregarMateriasActivity"
             android:exported="false" />
         <activity
-            android:name=".MenuMateriasActivity"
+            android:name=".Materia.MenuMateriasActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

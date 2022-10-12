@@ -1,10 +1,12 @@
-package com.example.promedioest;
+package com.example.promedioest.Materia;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+
+import com.example.promedioest.R;
 
 public class MenuMateriasActivity extends AppCompatActivity {
 
@@ -16,7 +18,7 @@ public class MenuMateriasActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_materias);
+        setContentView(R.layout.activity_materia_menu_materias);
 
         this.agregarMateriasBtn = findViewById(R.id.agregarMateriasBtn);
         this.agregarMateriasBtn.setOnClickListener(view -> {
