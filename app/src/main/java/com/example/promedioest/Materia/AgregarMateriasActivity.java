@@ -49,8 +49,8 @@ public class AgregarMateriasActivity extends AppCompatActivity {
 
         Long idResultante = db.insert(Utilidades.TABLA_MATERIA,Utilidades.CAMPO_ID_MAT,values);
 
-        //Toast.makeText(getApplicationContext(),"ID Registro: "+ idResultante,Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"ID Registro: "+ idResultante,Toast.LENGTH_SHORT).show();
 
-        //db.close();
+        db.close();
     }
 }

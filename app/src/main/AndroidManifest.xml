@@ -23,12 +23,6 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".InformeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DatosActivity"
-            android:exported="false" />
-        <activity
             android:name=".InicioActivity"
             android:exported="true">
             <intent-filter>

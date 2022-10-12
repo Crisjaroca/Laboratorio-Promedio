@@ -4,26 +4,24 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.Nullable;
-
 import com.example.promedioest.utilidades.Utilidades;
 
 public class ConexionSQLiteHelper extends SQLiteOpenHelper {
 
-    public ConexionSQLiteHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+    public ConexionSQLiteHelper(Context context,String name,SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(Utilidades.CREAR_TABLA_MATERIA);
-        db.execSQL(Utilidades.CREAR_TABLA_ESTUDIANTE);
+        //db.execSQL(Utilidades.CREAR_TABLA_ESTUDIANTE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int versionAntigua, int versionNueva) {
-        db.execSQL("DROP TABLE IF EXISTS materia");
-        db.execSQL("DROP TABLE IF EXISTS estudiantes");
+        db.execSQL("DROP TABLE IF EXISTS materias");
+        //db.execSQL("DROP TABLE IF EXISTS estudiantes");
         onCreate(db);
     }
 }
