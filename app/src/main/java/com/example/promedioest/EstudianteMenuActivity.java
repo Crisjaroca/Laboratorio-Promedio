@@ -2,6 +2,7 @@ package com.example.promedioest;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -111,15 +112,62 @@ public class EstudianteMenuActivity extends AppCompatActivity {
     }
 
     private void modificar() {
+        SQLiteDatabase db=conn.getWritableDatabase();
+        String[] parametros = {codigoEstudianteTxt.getText().toString()};
+        ContentValues values = new ContentValues();
+        values.put(Utilidades.CAMPO_NOMBRE_EST,nombreEstudianteTxt.getText().toString());
+        values.put(Utilidades.CAMPO_MATERIA_EST,comboMateriasEstudiante.getSelectedItem().toString());
+
+        db.update(Utilidades.TABLA_ESTUDIANTE,values,Utilidades.CAMPO_ID_EST+"=?",parametros);
+        Toast.makeText(getApplicationContext(), "Datos Actualizados", Toast.LENGTH_SHORT).show();
+        db.close();
     }
 
     private void eliminar() {
+        SQLiteDatabase db=conn.getWritableDatabase();
+        String[] parametros = {codigoEstudianteTxt.getText().toString()};
+
+        db.delete(Utilidades.TABLA_ESTUDIANTE,Utilidades.CAMPO_ID_EST+"=?",parametros);
+        Toast.makeText(getApplicationContext(), "Estudiante Eliminado", Toast.LENGTH_SHORT).show();
+        codigoEstudianteTxt.setText("");
+        limpiar();
+        db.close();
     }
 
     private void buscar() {
+        SQLiteDatabase db=conn.getReadableDatabase();
+        String[] parametros = {codigoEstudianteTxt.getText().toString()};
+        String[] campos={Utilidades.CAMPO_NOMBRE_EST,Utilidades.CAMPO_MATERIA_EST};
+
+        try {
+            Cursor cursor = db.query(Utilidades.TABLA_ESTUDIANTE, campos,Utilidades.CAMPO_ID_EST+"=?",parametros,null,null,null);
+            cursor.moveToFirst();
+            nombreEstudianteTxt.setText(cursor.getString(0));
+            comboMateriasEstudiante.setSelection(0);
+            cursor.close();
+        } catch (Exception e){
+            Toast.makeText(getApplicationContext(), "El código no existe", Toast.LENGTH_SHORT).show();
+            limpiar();
+        }
+    }
+
+    private void limpiar() {
+        nombreEstudianteTxt.setText("");
+        comboMateriasEstudiante.setSelection(0);
     }
 
     private void agregar() {
+        SQLiteDatabase db=conn.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+
+        values.put(Utilidades.CAMPO_ID_EST,codigoEstudianteTxt.getText().toString());
+        values.put(Utilidades.CAMPO_NOMBRE_EST,nombreEstudianteTxt.getText().toString());
+        values.put(Utilidades.CAMPO_MATERIA_EST,comboMateriasEstudiante.getSelectedItem().toString());
+
+        Long id_resultante = db.insert(Utilidades.TABLA_ESTUDIANTE,Utilidades.CAMPO_ID_EST,values);
+        Toast.makeText(getApplicationContext(), "ID Registro: "+id_resultante, Toast.LENGTH_SHORT).show();
+        db.close();
     }
 
     private Boolean verificacionCasillas() {
