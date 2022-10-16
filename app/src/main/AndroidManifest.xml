@@ -13,6 +13,13 @@
         android:theme="@style/Theme.PromedioEst"
         tools:targetApi="31">
         <activity
+            android:name=".NotaMenuActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".EstudianteListaCompletaActivity"
             android:exported="false">
             <meta-data

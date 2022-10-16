@@ -33,19 +33,29 @@ public class EstudianteMenuActivity extends AppCompatActivity {
 
     public void onClick(View view){
         Intent intent=null;
+        Boolean validacion;
 
         switch (view.getId()){
             case R.id.agregarEstudianteBtn:
-                agregar();
+                validacion = verificacionCasillas();
+                if (validacion == false){
+                    agregar();
+                }
                 break;
             case R.id.buscarEstudianteBtn:
                 buscar();
                 break;
             case R.id.eliminarEstudianteBtn:
-                eliminar();
+                validacion = verificacionCasillas();
+                if (validacion == false){
+                    eliminar();
+                }
                 break;
             case R.id.modificarEstudianteBtn:
-                modificar();
+                validacion = verificacionCasillas();
+                if (validacion == false){
+                    modificar();
+                }
                 break;
             case R.id.listarEstudianteIndividualBtn:
                 intent = new Intent(EstudianteMenuActivity.this, EstudianteListaIndividualActivity.class);
@@ -57,6 +67,20 @@ public class EstudianteMenuActivity extends AppCompatActivity {
         if (intent!=null){
             startActivity(intent);
         }
+    }
+
+    private Boolean verificacionCasillas() {
+        Boolean prueba;
+        if (codigoEstudianteTxt.getText().toString().isEmpty() || nombreEstudianteTxt.getText().toString().isEmpty() || materiaEstudianteTxt.getText().toString().isEmpty()){
+            Toast.makeText(getApplicationContext(), "Casillas de Ingreso Vacías ", Toast.LENGTH_SHORT).show();
+            prueba = true;
+        } else if (codigoEstudianteTxt.getText().length() < 6){
+            Toast.makeText(getApplicationContext(), "El código Requiere Mínimo\n6 Dígitos ", Toast.LENGTH_SHORT).show();
+            prueba = true;
+        } else {
+            prueba = false;
+        }
+        return prueba;
     }
 
     private void modificar() {
@@ -108,12 +132,12 @@ public class EstudianteMenuActivity extends AppCompatActivity {
         SQLiteDatabase db=conn.getWritableDatabase();
 
         ContentValues values = new ContentValues();
+
         values.put(Utilidades.CAMPO_ID_EST,codigoEstudianteTxt.getText().toString());
         values.put(Utilidades.CAMPO_NOMBRE_EST,nombreEstudianteTxt.getText().toString());
         values.put(Utilidades.CAMPO_MATERIA_EST,materiaEstudianteTxt.getText().toString());
 
         Long id_resultante = db.insert(Utilidades.TABLA_ESTUDIANTE,Utilidades.CAMPO_ID_EST,values);
-
         Toast.makeText(getApplicationContext(), "ID Registro: "+id_resultante, Toast.LENGTH_SHORT).show();
     }
 

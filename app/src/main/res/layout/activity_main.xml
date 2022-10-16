@@ -38,7 +38,8 @@
             android:id="@+id/notasBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="NOTAS" />
+            android:text="NOTAS"
+            android:onClick="onClick"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

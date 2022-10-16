@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#94A7FFEB"
-    tools:context=".EstudianteMenuActivity">
+    tools:context=".NotaMenuActivity">
 
     <TextView
         android:id="@+id/textView5"
         style="@style/tituloprincipalTxt"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
-        android:text="ESTUDIANTES" />
+        android:text="NOTAS" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -34,38 +34,19 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:text="Código"
+            android:text="Estudiante"
             android:textColor="@color/black" />
 
-        <LinearLayout
+        <Spinner
+            android:id="@+id/spinner"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/codigoEstudianteTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="Código"
-                android:inputType="number"
-                android:maxLength="8"
-                android:textColor="@color/black" />
-
-            <Button
-                android:id="@+id/buscarEstudianteBtn"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:onClick="onClick"
-                app:icon="?android:attr/actionModeWebSearchDrawable" />
-        </LinearLayout>
+            android:entries="@array/materias"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:spinnerMode="dialog" />
 
         <TextView
             android:id="@+id/codigoInfoTxt"
@@ -118,9 +99,9 @@
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
+        android:onClick="onClick"
         android:text="Agregar"
         android:textSize="20dp"
-        android:onClick="onClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
@@ -129,9 +110,9 @@
         android:id="@+id/modificarEstudianteBtn"
         android:layout_width="200dp"
         android:layout_height="60dp"
+        android:onClick="onClick"
         android:text="Modificar"
         android:textSize="20dp"
-        android:onClick="onClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/agregarEstudianteBtn" />
@@ -140,9 +121,9 @@
         android:id="@+id/eliminarEstudianteBtn"
         android:layout_width="200dp"
         android:layout_height="60dp"
+        android:onClick="onClick"
         android:text="Eliminar"
         android:textSize="20dp"
-        android:onClick="onClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/modificarEstudianteBtn" />

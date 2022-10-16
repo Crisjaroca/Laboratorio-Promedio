@@ -63,7 +63,7 @@ public class EstudianteListaCompletaActivity extends AppCompatActivity {
         listaInformacion = new ArrayList<String>();
 
         for (int i = 0; i<listaEstudiantes.size(); i++){
-            listaInformacion.add("\nCódigo:\n"+listaEstudiantes.get(i).getCodigo()+"\n\nNombre:\n"+listaEstudiantes.get(i).getNombre()+"\n\nMateria\n"+listaEstudiantes.get(i).getMateria()+"\n");
+            listaInformacion.add("\nCódigo:\n"+listaEstudiantes.get(i).getCodigo()+"\n\nNombre:\n"+listaEstudiantes.get(i).getNombre()+"\n\nMateria:\n"+listaEstudiantes.get(i).getMateria()+"\n");
         }
     }
 
