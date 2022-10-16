@@ -28,16 +28,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/materiasBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="MATERIAS" />
-
-        <Button
             android:id="@+id/estudiantesBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ESTUDIANTES" />
+            android:text="ESTUDIANTES"
+            android:onClick="onClick"/>
 
         <Button
             android:id="@+id/notasBtn"

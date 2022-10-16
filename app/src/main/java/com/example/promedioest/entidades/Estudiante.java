@@ -1,21 +1,25 @@
 package com.example.promedioest.entidades;
 
 public class Estudiante {
-    private Integer codigo;
+    private String codigo;
     private String nombre;
     private String materia;
 
-    public Estudiante(Integer id, String nombre, String materia) {
+    public Estudiante(String id, String nombre, String materia) {
         this.codigo = id;
         this.nombre = nombre;
         this.materia = materia;
     }
 
-    public Integer getCodigo() {
+    public Estudiante(){
+
+    }
+
+    public String getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(Integer codigo) {
+    public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 
