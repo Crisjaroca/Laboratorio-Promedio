@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#94A7FFEB"
-    tools:context=".EstudianteMenuActivity">
+    tools:context=".MateriaMenuActivity">
 
     <TextView
         android:id="@+id/textView5"
         style="@style/tituloprincipalTxt"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
-        android:text="ESTUDIANTES" />
+        android:text="Materias" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -43,7 +43,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/codigoEstudianteTxt"
+                android:id="@+id/codigoMateriaTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -53,11 +53,11 @@
                 android:ems="10"
                 android:hint="Código"
                 android:inputType="number"
-                android:maxLength="8"
+                android:maxLength="5"
                 android:textColor="@color/black" />
 
             <Button
-                android:id="@+id/buscarEstudianteBtn"
+                android:id="@+id/buscarMateriaBtn"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -78,7 +78,7 @@
             android:textColor="@color/black" />
 
         <EditText
-            android:id="@+id/nombreEstudianteTxt"
+            android:id="@+id/nombreMateriaTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -90,33 +90,10 @@
             android:maxLength="30"
             android:textColor="@color/black" />
 
-        <TextView
-            android:id="@+id/nombreInfoTxt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:text="Materia"
-            android:textColor="@color/black" />
-
-        <EditText
-            android:id="@+id/materiaEstudianteTxt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:ems="10"
-            android:hint="Materia"
-            android:maxLength="30"
-            android:inputType="textPersonName" />
-
     </LinearLayout>
 
     <Button
-        android:id="@+id/agregarEstudianteBtn"
+        android:id="@+id/agregarMateriaBtn"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
@@ -128,7 +105,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <Button
-        android:id="@+id/modificarEstudianteBtn"
+        android:id="@+id/modificarMateriaBtn"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:text="Modificar"
@@ -136,10 +113,10 @@
         android:onClick="onClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/agregarEstudianteBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/agregarMateriaBtn" />
 
     <Button
-        android:id="@+id/eliminarEstudianteBtn"
+        android:id="@+id/eliminarMateriaBtn"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:text="Eliminar"
@@ -147,10 +124,10 @@
         android:onClick="onClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/modificarEstudianteBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/modificarMateriaBtn" />
 
     <Button
-        android:id="@+id/listarEstudianteIndividualBtn"
+        android:id="@+id/listarMateriaIndividualBtn"
         android:layout_width="160dp"
         android:layout_height="70dp"
         android:layout_marginStart="15dp"
@@ -160,10 +137,10 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eliminarEstudianteBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/eliminarMateriaBtn" />
 
     <Button
-        android:id="@+id/listarEstudianteCompletoBtn"
+        android:id="@+id/listarMateriaCompletaBtn"
         android:layout_width="160dp"
         android:layout_height="70dp"
         android:layout_marginEnd="15dp"
@@ -173,6 +150,6 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eliminarEstudianteBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/eliminarMateriaBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

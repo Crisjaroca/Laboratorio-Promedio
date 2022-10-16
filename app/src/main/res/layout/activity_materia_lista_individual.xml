@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#94A7FFEB"
-    tools:context=".EstudianteListaIndividualActivity">
+    tools:context=".MateriaListaIndividualActivity">
 
     <ImageButton
         android:id="@+id/cerrarBtn"
@@ -21,7 +21,7 @@
         style="@style/tituloprincipalTxt"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
-        android:text="ESTUDIANTES" />
+        android:text="MATERIAS" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -43,12 +43,12 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:text="Seleccione un estudiante"
+            android:text="Seleccione un materia"
             android:textColor="@color/black"
             android:textSize="20dp" />
 
         <Spinner
-            android:id="@+id/comboEstudiantes"
+            android:id="@+id/comboMaterias"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginLeft="10dp"
@@ -129,38 +129,6 @@
             android:textColor="@color/purple_700"
             android:textSize="20dp" />
 
-        <View
-            android:id="@+id/divider3"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_weight="1"
-            android:background="?android:attr/listDivider" />
-
-        <TextView
-            android:id="@+id/TextView3"
-            android:layout_width="78dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:text="Materia:"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
-
-        <TextView
-            android:id="@+id/materiaInfoTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:hint="Sin Selección"
-            android:paddingStart="10dp"
-            android:paddingRight="10dp"
-            android:textColor="@color/purple_700"
-            android:textSize="20dp" />
     </LinearLayout>
 
 

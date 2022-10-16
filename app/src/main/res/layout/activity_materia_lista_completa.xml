@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#94A7FFEB"
-    tools:context=".EstudianteListaCompletaActivity">
+    tools:context=".MateriaListaCompletaActivity">
 
     <ImageButton
         android:id="@+id/cerrarBtn"
@@ -21,10 +21,13 @@
         style="@style/tituloprincipalTxt"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
-        android:text="ESTUDIANTES" />
+        android:text="MATERIAS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
-        android:id="@+id/listViewEstudiantes"
+        android:id="@+id/listViewMaterias"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="30dp"
