@@ -1,16 +1,18 @@
 package com.example.promedioest.entidades;
 
-public class Materia {
+import java.io.Serializable;
+
+public class Materia implements Serializable {
     private String codigo;
     private String nombre;
+
+    public Materia(){
+
+    }
 
     public Materia(String codigo, String nombre) {
         this.codigo = codigo;
         this.nombre = nombre;
-    }
-
-    public Materia(){
-
     }
 
     public String getCodigo() {

@@ -37,7 +37,7 @@ public class MateriaListaIndividualActivity extends AppCompatActivity {
 
         comboMaterias = findViewById(R.id.comboMaterias);
 
-        consultarListaEstudiantes();
+        consultarListaMaterias();
 
         ArrayAdapter<CharSequence> adaptador = new ArrayAdapter(this, R.layout.spinner_item_tamano, listaEstudiantes);
 
@@ -62,7 +62,7 @@ public class MateriaListaIndividualActivity extends AppCompatActivity {
         });
     }
 
-    private void consultarListaEstudiantes() {
+    private void consultarListaMaterias() {
         SQLiteDatabase db = conn.getReadableDatabase();
 
         Materia materia = null;

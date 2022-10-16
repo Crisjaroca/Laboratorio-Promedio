@@ -15,11 +15,13 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(Utilidades.CREAR_TABLA_MATERIA);
+        db.execSQL(Utilidades.CREAR_TABLA_ESTUDIANTE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int versionAntigua, int versionNueva) {
-        db.execSQL("DROP TABLE IF EXISTS materia");
+        db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_MATERIA);
+        db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_ESTUDIANTE);
         onCreate(db);
     }
 }
