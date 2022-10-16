@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.notasBtn:
                 intent = new Intent(MainActivity.this,NotaMenuActivity.class);
                 break;
+            case R.id.estudiantesBtn:
+                intent = new Intent(MainActivity.this,EstudianteMenuActivity.class);
+                break;
         }
         if (intent!=null){
             startActivity(intent);

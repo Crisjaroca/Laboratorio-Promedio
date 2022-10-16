@@ -35,6 +35,13 @@
             android:text="Materias" />
 
         <Button
+            android:id="@+id/estudiantesBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="Estudiantes" />
+
+        <Button
             android:id="@+id/notasBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
