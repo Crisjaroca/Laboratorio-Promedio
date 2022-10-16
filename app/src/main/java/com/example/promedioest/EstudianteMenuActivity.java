@@ -88,10 +88,7 @@ public class EstudianteMenuActivity extends AppCompatActivity {
                 buscar();
                 break;
             case R.id.eliminarEstudianteBtn:
-                validacion = verificacionCasillas();
-                if (validacion == false){
-                    eliminar();
-                }
+                eliminar();
                 break;
             case R.id.modificarEstudianteBtn:
                 validacion = verificacionCasillas();
