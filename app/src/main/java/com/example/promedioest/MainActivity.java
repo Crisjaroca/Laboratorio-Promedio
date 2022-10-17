@@ -32,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.estudiantesBtn:
                 intent = new Intent(MainActivity.this,EstudianteMenuActivity.class);
                 break;
+            case R.id.volverBtn2:
+                finish();
+                break;
         }
         if (intent!=null){
             startActivity(intent);

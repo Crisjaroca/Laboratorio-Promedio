@@ -62,6 +62,9 @@ public class MateriaMenuActivity extends AppCompatActivity {
             case R.id.listarMateriaCompletaBtn:
                 intent = new Intent(MateriaMenuActivity.this, MateriaListaCompletaActivity.class);
                 break;
+            case R.id.volverBtn3:
+                finish();
+                break;
         }
         if (intent!=null){
             startActivity(intent);

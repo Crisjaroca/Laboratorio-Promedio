@@ -86,7 +86,7 @@ public class MateriaListaIndividualActivity extends AppCompatActivity {
         listaEstudiantes.add("Seleccione...");
 
         for (int i = 0; i< materiasList.size(); i++){
-            listaEstudiantes.add(materiasList.get(i).getCodigo()+" - "+ materiasList.get(i).getNombre());
+            listaEstudiantes.add(materiasList.get(i).getCodigo());
         }
     }
 

@@ -69,7 +69,7 @@ public class EstudianteMenuActivity extends AppCompatActivity {
         listaMaterias.add("Seleccione...");
 
         for (int i = 0; i< materiasList.size(); i++){
-            listaMaterias.add(materiasList.get(i).getCodigo()+" - "+ materiasList.get(i).getNombre());
+            listaMaterias.add(materiasList.get(i).getNombre());
         }
     }
 
@@ -101,6 +101,9 @@ public class EstudianteMenuActivity extends AppCompatActivity {
                 break;
             case R.id.listarEstudianteCompletolBtn:
                 intent = new Intent(EstudianteMenuActivity.this, EstudianteListaCompletaActivity.class);
+                break;
+            case R.id.volverBtn:
+                finish();
                 break;
         }
         if (intent!=null){

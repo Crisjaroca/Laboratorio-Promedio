@@ -8,7 +8,7 @@
     tools:context=".NotaMenuActivity">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView12"
         style="@style/tituloprincipalTxt"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
@@ -25,7 +25,7 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5">
+        app:layout_constraintTop_toBottomOf="@+id/textView12">
 
         <TextView
             android:id="@+id/textView"
@@ -38,7 +38,7 @@
             android:textColor="@color/black" />
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/comboEstudiantesNota"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:entries="@array/materias"
@@ -49,39 +49,18 @@
             android:spinnerMode="dialog" />
 
         <TextView
-            android:id="@+id/codigoInfoTxt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:text="Nombre"
-            android:textColor="@color/black" />
-
-        <EditText
-            android:id="@+id/nombreMateriaTxt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:ems="10"
-            android:hint="Nombre"
-            android:inputType="textPersonName"
-            android:textColor="@color/black" />
-
-        <TextView
             android:id="@+id/nombreInfoTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:text="Materia"
+            android:text="Nota"
+            android:textAlignment="center"
             android:textColor="@color/black" />
 
         <EditText
-            android:id="@+id/materiaEstudianteTxt"
+            android:id="@+id/notaEstudianteTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -89,13 +68,14 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
             android:ems="10"
-            android:hint="Materia"
-            android:inputType="textPersonName" />
+            android:hint="Ingrese Una Nota"
+            android:inputType="numberDecimal"
+            android:maxLength="3" />
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/agregarMateriaBtn"
+        android:id="@+id/agregarNotaBtn"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
@@ -107,7 +87,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <Button
-        android:id="@+id/modificarMateriaBtn"
+        android:id="@+id/modificarNotaBtn"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:onClick="onClick"
@@ -115,10 +95,10 @@
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/agregarMateriaBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/agregarNotaBtn" />
 
     <Button
-        android:id="@+id/eliminarMateriaBtn"
+        android:id="@+id/eliminarNotaBtn"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:onClick="onClick"
@@ -126,32 +106,17 @@
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/modificarMateriaBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/modificarNotaBtn" />
 
     <Button
-        android:id="@+id/listarMateriaIndividualBtn"
-        android:layout_width="160dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="15dp"
+        android:id="@+id/listarNotaIndividualBtn"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
         android:onClick="onClick"
-        android:text="Listar Individual"
+        android:text="Informe"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eliminarMateriaBtn" />
-
-    <Button
-        android:id="@+id/listarMateriaCompletaBtn"
-        android:layout_width="160dp"
-        android:layout_height="70dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="15dp"
-        android:onClick="onClick"
-        android:text="Listar Completo"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eliminarMateriaBtn" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eliminarNotaBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#BFE4F4"
     tools:context=".EstudianteListaCompletaActivity">
 
     <ImageButton
@@ -12,7 +13,7 @@
         android:layout_height="40dp"
         android:onClick="onClick"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
         app:srcCompat="@android:drawable/btn_dialog" />
 
     <TextView
