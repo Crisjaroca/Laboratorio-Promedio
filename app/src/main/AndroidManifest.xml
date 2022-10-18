@@ -13,6 +13,27 @@
         android:theme="@style/Theme.PromedioEst"
         tools:targetApi="31">
         <activity
+            android:name=".NotaInformeActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".NotaInformeBtn"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".NotaEstudianteActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".EstudianteListaCompletaActivity"
             android:exported="false">
             <meta-data

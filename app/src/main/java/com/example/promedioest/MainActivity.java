@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(MainActivity.this, MateriaMenuActivity.class);
                 break;
             case R.id.notasBtn:
-                intent = new Intent(MainActivity.this,NotaMenuActivity.class);
+                intent = new Intent(MainActivity.this,NotaEstudianteActivity.class);
                 break;
             case R.id.estudiantesBtn:
                 intent = new Intent(MainActivity.this,EstudianteMenuActivity.class);
