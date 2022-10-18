@@ -12,7 +12,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginEnd="5dp"
-        android:backgroundTint="@color/teal_700"
+        android:backgroundTint="#001CFF"
         android:onClick="onClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tituloTxt"
@@ -23,8 +23,9 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="5dp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="#001CFF"
         android:onClick="onClick"
+        android:tint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tituloTxt"
         app:srcCompat="?attr/homeAsUpIndicator" />
@@ -34,6 +35,7 @@
         style="@style/tituloprincipalTxt"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
+        android:fontFamily="@font/amarante"
         android:text="Notas" />
 
     <LinearLayout
@@ -56,6 +58,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
+            android:fontFamily="@font/amarante"
             android:text="Seleccione un estudiante"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -92,6 +95,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
+            android:fontFamily="@font/amarante"
             android:text="Código:"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -104,6 +108,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
+            android:fontFamily="@font/amarante"
             android:hint="Sin Selección"
             android:paddingStart="10dp"
             android:textColor="@color/purple_700"
@@ -124,6 +129,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
+            android:fontFamily="@font/amarante"
             android:text="Nombre:"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -136,6 +142,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
+            android:fontFamily="@font/amarante"
             android:hint="Sin Selección"
             android:paddingStart="10dp"
             android:paddingRight="10dp"
@@ -158,6 +165,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
+            android:fontFamily="@font/amarante"
             android:text="Materia:"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -169,6 +177,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
+            android:fontFamily="@font/amarante"
             android:hint="Sin Selección"
             android:paddingStart="10dp"
             android:paddingRight="10dp"

@@ -12,6 +12,7 @@
         style="@style/tituloprincipalTxt"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
+        android:fontFamily="@font/amarante"
         android:text="ESTUDIANTES" />
 
     <LinearLayout
@@ -34,6 +35,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
+            android:fontFamily="@font/amarante"
             android:text="Código"
             android:textColor="@color/black" />
 
@@ -51,6 +53,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:ems="10"
+                android:fontFamily="@font/amarante"
                 android:hint="Código"
                 android:inputType="number"
                 android:maxLength="8"
@@ -63,6 +66,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
+                android:backgroundTint="#001CFF"
                 android:onClick="onClick"
                 app:icon="?android:attr/actionModeWebSearchDrawable" />
         </LinearLayout>
@@ -74,6 +78,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
+            android:fontFamily="@font/amarante"
             android:text="Nombre"
             android:textColor="@color/black" />
 
@@ -85,6 +90,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:ems="10"
+            android:fontFamily="@font/amarante"
             android:hint="Nombre"
             android:inputType="textPersonName"
             android:maxLength="30"
@@ -97,6 +103,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
+            android:fontFamily="@font/amarante"
             android:text="Materia"
             android:textColor="@color/black" />
 
@@ -116,6 +123,8 @@
         android:layout_width="160dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
+        android:backgroundTint="#FF0000"
+        android:fontFamily="@font/amarante"
         android:onClick="onClick"
         android:text="Agregar"
         android:textSize="20dp"
@@ -128,6 +137,8 @@
         android:layout_width="160dp"
         android:layout_height="60dp"
         android:layout_marginStart="15dp"
+        android:backgroundTint="#FF0000"
+        android:fontFamily="@font/amarante"
         android:onClick="onClick"
         android:text="Modificar"
         android:textSize="20dp"
@@ -139,6 +150,8 @@
         android:layout_width="160dp"
         android:layout_height="60dp"
         android:layout_marginEnd="15dp"
+        android:backgroundTint="#FF0000"
+        android:fontFamily="@font/amarante"
         android:onClick="onClick"
         android:text="Eliminar"
         android:textSize="20dp"
@@ -150,6 +163,8 @@
         android:layout_width="160dp"
         android:layout_height="70dp"
         android:layout_marginStart="15dp"
+        android:backgroundTint="#FF0000"
+        android:fontFamily="@font/amarante"
         android:onClick="onClick"
         android:text="Listar Individual"
         android:textSize="20dp"
@@ -161,6 +176,8 @@
         android:layout_width="160dp"
         android:layout_height="70dp"
         android:layout_marginEnd="15dp"
+        android:backgroundTint="#FA0000"
+        android:fontFamily="@font/amarante"
         android:onClick="onClick"
         android:text="Listar Completo"
         android:textSize="20dp"
@@ -172,8 +189,9 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="5dp"
-        android:backgroundTint="#F8F8F8"
+        android:backgroundTint="#001CFF"
         android:onClick="onClick"
+        android:tint="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         app:srcCompat="?attr/actionModeCloseDrawable" />

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#94A7FFEB"
+    android:background="#BFE4F4"
     tools:context=".NotaInformeActivity">
 
     <ScrollView
@@ -23,6 +23,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="90dp"
                 android:background="#F80000"
+                android:fontFamily="@font/amarante"
                 android:text="INFORME DE NOTAS"
                 tools:layout_editor_absoluteX="0dp"
                 tools:layout_editor_absoluteY="-1dp" />
@@ -40,6 +41,7 @@
                 android:id="@+id/cerrarBtn3"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:backgroundTint="#BFE4F4"
                 android:onClick="onClick"
                 app:srcCompat="@android:drawable/btn_dialog" />
 
@@ -51,6 +53,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="50dp"
                 android:background="#2F44B1"
+                android:fontFamily="@font/amarante"
                 android:text="Datos Estudiante"
                 android:textAlignment="center"
                 android:textColor="@color/white"
@@ -77,6 +80,7 @@
                     android:id="@+id/nombreInfo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/amarante"
                     android:text="Aquíva"
                     android:textAlignment="center"
                     android:textColor="@color/black"
@@ -86,6 +90,7 @@
                     android:id="@+id/codigoInfo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/amarante"
                     android:text="Aquíva"
                     android:textAlignment="center"
                     android:textColor="@color/black"
@@ -95,6 +100,7 @@
                     android:id="@+id/materiaInfo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/amarante"
                     android:text="Aquíva"
                     android:textAlignment="center"
                     android:textColor="@color/black"
@@ -129,6 +135,7 @@
                     android:layout_marginTop="30dp"
                     android:layout_marginEnd="50dp"
                     android:background="#2F44B1"
+                    android:fontFamily="@font/amarante"
                     android:text="Notas"
                     android:textAlignment="center"
                     android:textColor="@color/white"
@@ -168,6 +175,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="50dp"
                 android:background="#2F44B1"
+                android:fontFamily="@font/amarante"
                 android:text="Promedio"
                 android:textAlignment="center"
                 android:textColor="@color/white"
@@ -198,6 +206,7 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
                 android:background="#306BFF"
+                android:fontFamily="@font/autour_one"
                 android:text="TextView"
                 android:textAlignment="center"
                 android:textColor="@color/white"

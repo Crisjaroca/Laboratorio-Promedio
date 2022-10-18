@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#94A7FFEB"
+    android:background="#BFE4F4"
     tools:context=".MateriaListaIndividualActivity">
 
     <ImageButton
         android:id="@+id/cerrarBtn"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:backgroundTint="#BFE4F4"
         android:onClick="onClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
@@ -21,6 +22,7 @@
         style="@style/tituloprincipalTxt"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
+        android:fontFamily="@font/amarante"
         android:text="MATERIAS" />
 
     <LinearLayout
@@ -43,6 +45,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
+            android:fontFamily="@font/amarante"
             android:text="Seleccione un materia"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -79,6 +82,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
+            android:fontFamily="@font/amarante"
             android:text="Código:"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -91,6 +95,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
+            android:fontFamily="@font/amarante"
             android:hint="Sin Selección"
             android:paddingStart="10dp"
             android:textColor="@color/purple_700"
@@ -111,6 +116,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
+            android:fontFamily="@font/amarante"
             android:text="Nombre:"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -123,6 +129,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
+            android:fontFamily="@font/amarante"
             android:hint="Sin Selección"
             android:paddingStart="10dp"
             android:paddingRight="10dp"

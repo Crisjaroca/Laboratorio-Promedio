@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#94A7FFEB"
+    android:background="#BFE4F4"
     tools:context=".MateriaListaCompletaActivity">
 
     <ImageButton
         android:id="@+id/cerrarBtn"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:backgroundTint="#BFE4F4"
         android:onClick="onClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
@@ -21,6 +22,7 @@
         style="@style/tituloprincipalTxt"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
+        android:fontFamily="@font/amarante"
         android:text="MATERIAS"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
